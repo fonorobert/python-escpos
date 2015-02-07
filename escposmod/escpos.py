@@ -179,8 +179,14 @@ class Escpos:
             raise TextError()
 
 
-    def set(self, align='left', font='a', type='normal', width=1, height=1):
+    def set(self, align='left', font='a', type='normal', width=1, height=1, char='int'):
         """ Set text properties """
+
+        # Character table
+
+        if char.upper() == "INT":
+            self._raw(TXT_INT)
+
         # Align
         if align.upper() == "CENTER":
             self._raw(TXT_ALIGN_CT)
