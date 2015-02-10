@@ -6,8 +6,8 @@
 @license: GPL
 '''
 
-import Image
-import qrcode
+from PIL import Image
+#from PIL import qrcode
 import time
 
 from .constants import *
